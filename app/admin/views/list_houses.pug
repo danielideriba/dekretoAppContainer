@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 #{title}
+  if houses.length > 0
+    ul.list-group
+      each house, i in houses
+        li.list-group-item
+          a(href="/admin/houses/"+house._id)=house.name
+  else
+    span #{empty_list}
+    
+  hr
+  a.btn.btn-default(href='/admin/houses/add') Adicionar

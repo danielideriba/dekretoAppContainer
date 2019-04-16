@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 #{title}
+  if blocos.length > 0
+    ul.list-group
+      each bloco, i in blocos
+        li.list-group-item
+          a(href="/admin/carnaval/"+bloco._id)=bloco.nameParty
+  else
+    span #{empty_list}
+    
+  hr
+  a.btn.btn-default(href='/admin/carnaval/add') Adicionar

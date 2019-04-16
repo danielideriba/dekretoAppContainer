@@ -1,0 +1,243 @@
+html {
+	margin: 0;
+	padding: 0;
+	height: 100%;
+}
+body {
+	background: #fdfdfd;
+}
+
+header {
+	.header-principal {
+		display: block;
+		.brand-logo {
+			left: inherit;
+			-webkit-transform: inherit;
+			transform: inherit;
+			font-size: 18px;
+			i {
+				margin-right:3px;
+			}
+		}
+	}
+	.tab-principal {
+		li {
+			a {
+				font-size: 10px !important;
+				margin: -9px 0 0 0;
+				font-weight: 100;
+				span {
+					font-weight: 400;
+					display: block;
+					margin: -31px 0 0 0;
+					font-size: 18px;
+				}
+			}
+		}
+	}
+	.header-busca {
+		display: none;
+		.input-field {
+			.label-icon {
+				i {
+					line-height: 35px;
+				}
+			}
+		}
+	}
+	.side-nav {
+		.titulo {
+			background: #0277bd;
+			a {
+				color: #fff;
+			}
+		}
+		.item-filtro {
+			margin: 0 0 0 30px;
+			line-height: 40px;
+			label {
+				color: #666;
+			}
+		}
+	}
+}
+.lista-cards {
+	.row,.col {
+		padding: 0 3px;
+	} 
+
+	a {
+		color: inherit;
+		/*display: block;*/
+	}
+	.card-lista {
+		.card-content {
+			padding: 7px;
+
+			h2 {
+				font-size: 18px;
+				color: #FF2D19;
+				font-style: italic;
+				margin: 0 0 10px 0;
+				padding: 0;
+				font-weight: 300;
+			}
+			h3 {
+				font-size: 14px;
+				color: #333;
+				margin: 0;
+				padding: 0;
+				font-weight: 300;
+			}
+
+			p{
+				font-weight: 300;
+				margin: 0 0 5px 0;
+				span {
+					font-weight: 400;
+				}
+			}
+			.card-image {
+				margin: 0 10px 0 0;
+			}
+		}
+		.card-action {
+			clear: both;
+			padding: 15px 10px 15px 10px;
+
+			.icone {
+				float: left;
+				margin: 0 19px 0 0;
+				.material-icons {
+					font-size: 19px;
+					margin-right: 5px;
+				}
+				.icone-vip {
+					color: #F2CD15;
+				}
+				.icone-consumacao {
+					color: #0CC212;
+				}
+				.icone-openbar {
+					color: #F64C16;
+				}
+			}		
+		}
+	}
+}
+
+.detalhes {
+	.capa {
+		img {
+			width: 100%;
+		}
+	}
+	.resumo {
+		padding: 10px;
+		h2 {
+			font-size: 23px;
+			margin: 0;
+			padding: 0;
+		}
+		ul {
+			border-bottom: 1px solid #ddd;
+			clear: both;
+			padding: 0 0 15px 0;
+			margin: 15px 0 15px 0;
+			li {
+				color: #444;
+				font-size: 14px;
+				margin: 0 0 5px 0;
+				font-weight: 300;
+				i {
+					margin-right: 5px;
+					font-size: 18px;
+					color: #888;
+				} 
+			}
+		}
+		.descricao {
+			p {
+				font-size: 16px;
+				font-weight: 300;
+				color: #888;
+			}
+		}
+	}
+}
+
+
+/* Hack para Tabs - Correcao do Swipeable com height fixo em 200px 
+.tabs-content.carousel { 
+	height: auto; 
+	width: auto;
+	overflow-x:hidden; 
+	overflow-y: scroll;
+	.carousel-item {
+		height: auto;
+		width: auto;
+	} 
+	} */
+
+
+
+
+	#app {
+		/*display: none;*/
+	}
+	#loading {
+		display: block;
+		position: absolute;
+		top: 0;
+		left: 0;
+		z-index: 100;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba(255, 255, 255, 0.9);
+		background-image: url("../imagens/loading.gif");
+		background-repeat: no-repeat;
+		background-position: center;
+	}
+
+	.Segunda-Feira, .Terca-Feira, .Quarta-Feira, .Quinta-Feira, .Sexta-Feira, .Sabado, .Domingo {
+		display: none;
+
+	} 
+
+	/*.lista-cards {
+		#tab-seg {
+			.Segunda-Feira {
+				display: block;
+			}
+		}
+		#tab-ter {
+			.Terca-Feira {
+				display: block;
+			}
+		}
+		#tab-qua {
+			.Quarta-Feira {
+				display: block;
+			}
+		}
+		#tab-qui {
+			.Quinta-Feira {
+				display: block;
+			}
+		}
+		#tab-sex {
+			.Sexta-Feira {
+				display: block;
+			}
+		}
+		#tab-sab {
+			.Sabado {
+				display: block;
+			}
+		}
+		#tab-dom {
+			.Domingo {
+				display: block;
+			}
+		}
+	}*/

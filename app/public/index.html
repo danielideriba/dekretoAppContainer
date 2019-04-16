@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Dekreto</title>
+
+	<!--Let browser know website is optimized for mobile-->
+	<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+	<meta charset="utf-8">
+
+	<!--Import Google Icon Font-->
+	<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+
+	<!-- Compiled and minified CSS -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/css/materialize.min.css">
+	<link rel="stylesheet" href="css/global.css">
+
+	<!-- LIBS JavaScript -->
+	<script type="text/javascript" src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.1/js/materialize.min.js"></script>
+
+</head>
+<body>
+	<div id="app">
+
+		<header>
+
+			<!-- BUSCA -->
+			<nav class="header-busca">
+				<div class="nav-wrapper light-blue darken-3">
+					<form>
+						<div class="input-field">
+							<input id="search" type="search" required>
+							<label class="label-icon" for="search"><i class="material-icons">search</i></label>
+							<i class="material-icons btn-fecha-busca">close</i>
+						</div>
+					</form>
+				</div>
+			</nav>
+
+			<!-- HEADER Principal -->
+			<nav class="nav-extended light-blue darken-3">
+				<div class="nav-wrapper header-principal">
+					<div class="left">
+						<a href="#" data-activates="nav-usuario" class="button-collapse nav-usuario"><i class="material-icons">menu</i></a>
+						<a href="#!" class="brand-logo"><i class="material-icons">flash_on</i>Dekreto</a>
+					</div>
+					<ul class="right">
+						<li><a href="javascript:void(0);" class="btn-abre-busca"><i class="material-icons">search</i></a></li>
+						<li><a href="#" data-activates="nav-filtro" class="nav-filtro"><i class="material-icons">filter_list</i></a></li>
+					</ul>
+				</div>
+
+
+				<!-- BTN TABS Principais -->
+				<div class="nav-content">
+					<div>
+						<ul class="tabs tabs-transparent tab-principal">
+							<li class="tab col s3"><a href="#tab-seg">SEG<span>31</span></a></li>
+							<li class="tab col s3"><a href="#tab-ter">TER<span>01</span></a></li>
+							<li class="tab col s3"><a href="#tab-qua">QUA<span>02</span></a></li>
+							<li class="tab col s3"><a href="#tab-qui">QUI<span>03</span></a></li>
+							<li class="tab col s3"><a href="#tab-sex">SEX<span>04</span></a></li>
+							<li class="tab col s3"><a href="#tab-sab">SAB<span>05</span></a></li>
+							<li class="tab col s3"><a href="#tab-dom">DOM<span>06</span></a></li>
+						</ul>
+					</div>
+				</div>
+			</nav>
+
+			<!-- SideNav Usuário -->
+			<ul id="nav-usuario" class="side-nav">
+				<li>
+					<div class="user-view">
+						<div class="background">
+							<img src="imagens/office.jpg">
+						</div>
+						<a href="#!user" id="foto_usuario"></a>
+						<a href="#!name"><span class="white-text name" id="nome_usuario"></span></a>
+						<fb:login-button scope="public_profile,email" onlogin="checkLoginState();" data-auto-logout-link="true"> </fb:login-button>
+					</div>
+				</li>
+				<ul>
+					<li><a href="javascript:void(0);">Meus dados</a></li>
+					<li><a href="javascript:voi(0);" class="btn">Deixe seu Feedback</a></li>
+				</ul>
+			</ul>
+
+			<!-- SideNav Filtro -->
+			<ul id="nav-filtro" class="side-nav">
+
+				<li class="titulo"><a class="subheader">Filtros</a></li>
+
+				<li><a class="subheader">Tipo de festa</a></li>
+				<li class="item-filtro">
+					<input type="checkbox" class="filled-in" id="check-openbar" />
+					<label for="check-openbar">Open Bar</label>
+				</li>
+				<li class="item-filtro">
+					<input type="checkbox" class="filled-in" id="check-vip" />
+					<label for="check-vip">VIP</label>
+				</li>
+				<li class="item-filtro">
+					<input type="checkbox" class="filled-in" id="check-consumacao" />
+					<label for="check-consumacao">Consumação</label>
+				</li>
+
+				<li><div class="divider"></div></li>
+				<li><a class="subheader">Locais mais badalados</a></li>
+				<li class="item-filtro">
+					<input type="checkbox" class="filled-in" id="check-augusta" />
+					<label for="check-augusta">Augusta e região</label>
+				</li>
+				<li class="item-filtro">
+					<input type="checkbox" class="filled-in" id="check-vmadalena" />
+					<label for="check-vmadalena">Vila Madalena</label>
+				</li>
+				<li class="item-filtro">
+					<input type="checkbox" class="filled-in" id="check-volimpia" />
+					<label for="check-volimpia">Vila Olímpia</label>
+				</li>
+				<li class="item-filtro">
+					<input type="checkbox" class="filled-in" id="check-pinheiros" />
+					<label for="check-pinheiros">Pinheiros</label>
+				</li>
+
+
+				<li><div class="divider"></div></li>
+				<li><a class="subheader">Estilos</a></li>
+				<div id="estilos">
+
+				</div>
+
+			</ul>
+		</header>
+
+		<!-- CONTEUDO TABS Principais -->
+		<div class="row lista-cards">
+			<div id="tab-seg" class="col s12 tab-conteudo"></div>
+			<div id="tab-ter" class="col s12 tab-conteudo"></div>
+			<div id="tab-qua" class="col s12 tab-conteudo"></div>
+			<div id="tab-qui" class="col s12 tab-conteudo"></div>
+			<div id="tab-sex" class="col s12 tab-conteudo"></div>
+			<div id="tab-sab" class="col s12 tab-conteudo"></div>
+			<div id="tab-dom" class="col s12 tab-conteudo"></div>
+
+			
+		</div>
+		<div id="status"> </div>
+		<div id="loading"></div>
+
+		<!-- JavaScript e json do app -->
+		<script src="js/lista.json"></script>
+		<script src="js/global.js"></script>
+		<script>
+
+
+   // This is called with the results from from FB.getLoginStatus().
+   function statusChangeCallback(response) {
+   	console.log('statusChangeCallback');
+   	console.log(response);
+    // The response object is returned with a status field that lets the
+    // app know the current login status of the person.
+    // Full docs on the response object can be found in the documentation
+    // for FB.getLoginStatus().
+    if (response.status === 'connected') {
+      // Logged into your app and Facebook.
+      testAPI();
+  } else {
+      // The person is not logged into your app or we are unable to tell.
+      document.getElementById('status').innerHTML = 'Please log ' +
+      'into this app.';
+  }
+}
+
+  // This function is called when someone finishes with the Login
+  // Button.  See the onlogin handler attached to it in the sample
+  // code below.
+  function checkLoginState() {
+  	FB.getLoginStatus(function(response) {
+  		statusChangeCallback(response);
+  	});
+  }
+
+  window.fbAsyncInit = function() {
+  	FB.init({
+  		appId      : '318328151911682',
+  		cookie     : true,
+  		xfbml      : true,
+  		version    : 'v2.8'
+  	});
+
+  // Now that we've initialized the JavaScript SDK, we call 
+  // FB.getLoginStatus().  This function gets the state of the
+  // person visiting this page and can return one of three states to
+  // the callback you provide.  They can be:
+  //
+  // 1. Logged into your app ('connected')
+  // 2. Logged into Facebook, but not your app ('not_authorized')
+  // 3. Not logged into Facebook and can't tell if they are logged into
+  //    your app or not.
+  //
+  // These three cases are handled in the callback function.
+
+  FB.getLoginStatus(function(response) {
+  	statusChangeCallback(response);
+  });
+
+};
+
+  // Load the SDK asynchronously
+  (function(d, s, id) {
+  	var js, fjs = d.getElementsByTagName(s)[0];
+  	if (d.getElementById(id)) return;
+  	js = d.createElement(s); js.id = id;
+  	js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.10&appId=318328151911682";
+  	fjs.parentNode.insertBefore(js, fjs);
+  }(document, 'script', 'facebook-jssdk'));
+
+  // Here we run a very simple test of the Graph API after login is
+  // successful.  See statusChangeCallback() for when this call is made.
+  function testAPI() {
+
+  	FB.api(
+  		'/me',
+  		'GET',
+  		{"fields":"picture,name,first_name"},
+  		function(response) {
+  			document.getElementById('nome_usuario').innerHTML = response.name;
+  			document.getElementById('foto_usuario').innerHTML = '<img class="circle" src="'+response.picture.data.url+'">';
+  		}
+  		);
+  }
+
+</script>	
+<script>
+	(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+		(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+		m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+	ga('create', 'UA-104129373-1', 'auto');
+	ga('send', 'pageview');
+
+</script>
+</body>
+</html>

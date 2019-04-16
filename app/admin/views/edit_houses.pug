@@ -1,0 +1,40 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method='POST' action='/admin/houses/edit/'+house._id)
+      #form-group
+      label #{label_house_name}:
+      input.form-control(type='text', name='house_name', value=house.name)
+      #form-group
+      label #{label_house_address}:
+      input.form-control(type='text', name='house_address', value=house.address)
+      #form-group
+      label #{label_house_closeto}:
+      input.form-control(type='text', name='house_closeto', value=house.closeto)
+      #form-group
+      label #{label_house_email}:
+      input.form-control(type='text', name='house_email', value=house.email)
+      #form-group
+      label #{label_house_phone}:
+      input.form-control(type='text', name='house_phone', value=house.phone)
+      #form-group
+      label #{label_house_site}:
+      input.form-control(type='text', name='house_site', value=house.site)
+      #form-group
+      label #{label_house_description}:
+      textarea.form-control(name='house_description', cols='40', rows='10') #{house.description}
+      #form-group
+      label #{label_house_cover}:
+      input.form-control(type='text', name='house_cover', value=house.cover)
+      #form-group
+      label #{label_house_thumb}:
+      input.form-control(type='text', name='house_thumb', value=house.thumb)
+      #form-group
+      label #{label_house_coordinateslat}:
+      input.form-control(type='text', name='house_coordinateslat', value=house.coordinateslat)
+      #form-group
+      label #{label_house_coordinateslat}:
+      input.form-control(type='text', name='house_coordinateslng', value=house.coordinateslng)
+      br
+      button.btn.btn-primary(type='submit',value='Submit') Enviar

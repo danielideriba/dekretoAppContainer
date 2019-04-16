@@ -1,0 +1,9 @@
+extends layout
+
+block content
+  h1= name.user_name
+  label= name.email
+  //label= name.password
+  hr
+  a.btn.btn-default(href='/admin/users/edit/'+name._id) Editar
+  a.btn.btn-danger.delete-user(href='#', data-id=name._id) Deletar

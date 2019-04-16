@@ -1,0 +1,59 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method='POST' action='/admin/carnaval/add')
+      #form-group
+      label #{label_carnaval_name}:
+      input.form-control(type='text', name='bloco_name')
+      br
+      #form-group
+      label #{label_carnaval_description}:
+      textarea.form-control(type='text', name='bloco_description', cols='40', rows='10')
+      br
+      #form-group
+      label #{label_carnaval_event_date}:
+      input.form-control(type='text', id='datemask', name='bloco_event_date')
+      br
+      #form-group
+      label #{label_carnaval_event_hour_init}:
+      input.form-control(type='text', class='hourmask', name='bloco_event_hour_init')
+      br
+      #form-group
+      label #{label_carnaval_event_hour_end}:
+      input.form-control(type='text', class='hourmask', name='bloco_event_hour_end')
+      br
+      #form-group
+      label #{label_carnaval_event_link}:
+      input.form-control(type='text', name='bloco_event_link')
+      #form-group
+      label #{label_carnaval_event_price}:
+      input.form-control(type='text', name='bloco_event_price')
+      br
+      #form-group
+      label #{label_carnaval_event_cover}:
+      input.form-control(type='text', name='bloco_event_cover')
+      br
+      #form-group
+      label #{label_carnaval_event_location}:
+      input.form-control(type='text', name='bloco_event_location')
+      br 
+      #form-group
+      label #{label_carnaval_event_lat}:
+      input.form-control(type='text', name='bloco_event_lat')
+      br 
+      #form-group
+      label #{label_carnaval_event_lng}:
+      input.form-control(type='text', name='bloco_event_lng')
+      br 
+      #form-group
+        label #{label_events_style}:
+        ul.list-form
+          each genre in genres
+            li
+              input.form-checkbox(type='checkbox',value=genre._id,name='bloco_genre')
+              span #{genre.name}
+          br
+      #form-group
+      button.btn.btn-primary(type='submit',value='Submit') Enviar
+      

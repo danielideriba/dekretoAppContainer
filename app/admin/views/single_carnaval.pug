@@ -1,0 +1,40 @@
+extends layout
+
+block content
+  h1= blocos.nameParty
+  br
+  label Descrição do Bloco
+  p=blocos.description
+  label Estilo Musical
+  ul.list-form
+    each genre, i in genres
+      li
+        span=genre.name
+  br
+  label Festa vai ser:
+    span=blocos.nameParty
+  br
+  label=blocos.eventDate
+  br
+  label=blocos.initHour
+  br
+  label=blocos.endHour
+  br
+  label=blocos.linkEvento
+  br
+  label=blocos.priceType
+  br
+  label=blocos.cover
+  br
+  label=blocos.location
+  br
+  label=blocos.description
+  br
+  each genre, i in genres
+    label=genre.name
+    br
+  br
+  label=blocos.datetime
+  hr
+  a.btn.btn-default(href='/admin/carnaval/edit/'+blocos._id) Editar
+  a.btn.btn-danger.delete-user(href='#', data-path=currentPath, data-id=blocos._id) Deletar

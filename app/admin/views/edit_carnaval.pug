@@ -1,0 +1,16 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method='POST' action='/admin/carnaval/edit/'+bloco._id)
+      #form-group
+      label #{label_bloco_name}:
+      input.form-control(type='text', name='bloco_name', value=bloco.name)
+      #form-group
+      label #{label_bloco_coordinateslat}:
+      input.form-control(type='text', name='bloco_coordinateslat', value=bloco.coordinateslat)
+      #form-group
+      label #{label_bloco_coordinateslat}:
+      input.form-control(type='text', name='bloco_coordinateslng', value=bloco.coordinateslng)
+      br
+      button.btn.btn-primary(type='submit',value='Submit') Enviar

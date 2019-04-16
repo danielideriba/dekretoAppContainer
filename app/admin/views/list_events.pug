@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 #{title}
+  if events.length > 0
+    ul.list-group
+      each event, i in events
+        li.list-group-item
+          a(href="/admin/events/"+event._id)=event.name
+  else
+    span #{empty_list}
+    
+  hr
+  a.btn.btn-default(href='/admin/events/add') Adicionar

@@ -1,0 +1,53 @@
+{
+    "name": "dekreto",
+    "version": "1.0.0",
+    "description": "Dekreto APIRest for Dekreto App",
+    "main": "index.js",
+    "scripts": {
+      "dev": "nodemon server.js",
+      "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "repository": {
+      "type": "git",
+      "url": "git+https://github.com/danielideriba/dekretoApp.git"
+    },
+    "author": "Daniel Ideriba",
+    "license": "ISC",
+    "bugs": {
+      "url": "https://github.com/danielideriba/dekretoApp/issues"
+    },
+    "homepage": "https://github.com/danielideriba/dekretoApp#readme",
+    "devDependencies": {
+      "body-parser": "^1.18.3",
+      "jsonwebtoken": "^8.5.1",
+      "nodemon": "^1.18.10",
+      "path": "^0.12.7"
+    },
+    "dependencies": {
+      "asn1": "^0.2.3",
+      "assert-plus": "^1.0.0",
+      "bcryptjs": "^2.4.3",
+      "body-parser": "^1.18.1",
+      "connect-flash": "^0.1.1",
+      "dateformat": "^3.0.2",
+      "express": "^4.16.4",
+      "express-jwt": "^5.3.1",
+      "express-messages": "^1.0.1",
+      "express-session": "^1.15.5",
+      "express-validator": "^3.2.1",
+      "formidable": "^1.1.1",
+      "googlemaps": "^1.12.0",
+      "method-override": "^2.3.9",
+      "moment": "^2.4.0",
+      "mongodb": "^2.2.30",
+      "mongoose": "^4.11.5",
+      "mongoose-currency": "^0.2.0",
+      "morgan": "^1.9.0",
+      "multer": "^1.1.0",
+      "passport": "^0.4.0",
+      "passport-local": "^1.0.0",
+      "pug": "^2.0.0-rc.3",
+      "xml2js": "^0.4.19"
+    }
+  }
+  

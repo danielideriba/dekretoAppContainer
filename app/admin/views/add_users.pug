@@ -1,0 +1,24 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method='POST' action='/admin/users/add')
+      #form-group
+      label #{label_user_name}:
+      input.form-control(type='text', name='user_name')
+      #form-group
+      label #{label_email}:
+      input.form-control(type='text', name='email')
+      #form-group
+      label #{label_email_confirm}:
+      input.form-control(type='text', name='email_confirm')
+      #form-group
+      label #{label_password}:
+      input.form-control(type='password', name='password')
+      #form-group
+      label #{label_password2}:
+      input.form-control(type='password', name='password2')
+      br
+      #form-group
+      button.btn.btn-primary(type='submit',value='Submit') Enviar
+      

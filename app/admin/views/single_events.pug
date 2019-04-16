@@ -1,0 +1,42 @@
+extends layout
+
+block content
+  h1= events.name
+  br
+  label Descrição do evento
+  p=events.description
+  label Estilo Musical
+  ul.list-form
+    each genre, i in genres
+      li
+        span=genre.name
+  br
+  label Tipo
+  ul.list-form
+    each type, i in types
+      li
+        span=type.name
+  br
+  label Festa vai ser:  
+    span=houses_name
+  br
+  label=events.typeConditions
+  br
+  label=events.priceWithoutList
+  br
+  label=events.priceWithList
+  br
+  label=events.eventHour
+  br
+  label=events.eventDate
+  br
+  label=events.description
+  br
+  each genre, i in genres
+    label=genre.name
+    br
+  br
+  label=events.datetime
+  hr
+  a.btn.btn-default(href='/admin/events/edit/'+events._id) Editar
+  a.btn.btn-danger.delete-user(href='#', data-path=currentPath, data-id=events._id) Deletar

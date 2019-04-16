@@ -1,0 +1,75 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method='POST' action='/admin/events/edit/'+events._id)
+      #form-group
+      label #{label_events_name}:
+      input.form-control(type='text', name='events_name', value=events.name)
+      br
+      #form-group
+      label #{label_events_description}:
+      textarea.form-control(type='text', name='events_description', cols='40', rows='10', value=events.description)
+      br
+      #form-group
+      label #{label_events_date}:
+      input.form-control(type='text', id='datemask', name='events_date', value=events.eventDate) 
+      br
+      #form-group
+      label #{label_events_hour}:
+      input.form-control(type='text', id='hourmask', name='events_hour', value=events.eventHour)
+      br
+      #form-group
+      label #{label_events_priceWithList}:
+      input.form-control(type='text', name='events_price_with_list', value=events.priceWithList)
+      br
+      #form-group
+      label #{label_events_priceWithoutList}:
+      input.form-control(type='text', name='events_price_without_list', value=events.priceWithList)
+      br
+      #form-group
+      label #{label_events_priceBefore}:
+      input.form-control(type='text', name='events_price_before', value=events.priceBefore)
+      br
+      #form-group
+      label #{label_events_birthday}:
+      input.form-control(type='text', name='events_price_birthday', value=events.birthday)
+      br
+      #form-group
+      label #{label_events_typeConditions}:
+      input.form-control(type='text', name='events_type_conditions', value=events.typeConditions)
+      br
+      #form-group
+      label #{label_events_priceSingle}:
+      input.form-control(type='text', name='events_price_single', value=events.priceSingle)
+      br
+      #form-group
+      label #{label_events_cover}:
+      input.form-control(type='text', name='events_cover', value=events.cover)
+      br
+      #form-group
+      label #{label_events_style}:
+        ul.list-form
+          each genre in genres
+            li
+              input.form-checkbox(type='checkbox',value=id_genre,name='events_genre')
+              span #{genre.name}
+          br
+      #form-group
+      //- label #{label_events_belong_to}:
+      //- div
+      //-   select(name='events_houses')
+      //-     option(value="selecione a casa") Selecione a casa
+      //-       each house in houses
+      //-         option(value=house.id) #{house.name}
+      //- br  
+      //- #form-group
+      //- label #{label_events_type}:
+      //- ul.list-form
+      //-   each type in types
+      //-    li
+      //-      input.form-checkbox(type='checkbox',value=type._id,name='events_type')
+      //-      span #{type.name}
+      //-   br
+      //- #form-group
+      button.btn.btn-primary(type='submit',value='Submit') Enviar

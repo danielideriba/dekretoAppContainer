@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  h1 #{title}
+  form(method='POST' action='/admin/users/login')
+    #form-group
+    label Usuário:
+    input.form-control(type='text', name='username')
+    #form-group
+    label Senha:
+    input.form-control(type='password', name='password')
+    br
+    #form-group
+    button.btn.btn-primary(type='submit',value='Submit') Logar
+    br
+    br
+    i
+      a(href='/admin/users/add') Criar conta

@@ -1,0 +1,20 @@
+extends layout
+
+block content
+    h1 #{title}
+    form(method='POST' action='/admin/genre/add')
+      #form-group
+      label #{label_user_name}:
+      input.form-control(type='text', placeholder='Ex..Pagode', name='genre_name')
+      br
+      #form-group
+      button.btn.btn-primary(type='submit',value='Submit') Criar
+      br
+      br
+      if genres.length > 0
+        ul.list-group
+          each genre, i in genres
+            li.list-group-item
+              span(class='glyphicon glyphicon-trash delete-user' data-path=currentPath, data-id=genre._id) #{genre.name}
+      else
+        span #{empty_list}

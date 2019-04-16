@@ -1,0 +1,14 @@
+extends layout
+
+block content
+  h1 #{title}
+  if users.length > 0
+    ul.list-group
+      each user, i in users
+        li.list-group-item
+          a(href="/admin/users/"+user._id)=user.user_name
+  else
+    span #{empty_list}
+    
+  hr
+  a.btn.btn-default(href='/admin/users/add') Adicionar
